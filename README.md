@@ -41,7 +41,7 @@ python3 my_flask_api.py
     {"message": "user has existed"}
     ```
 - DELETE (Delete user)
-  * URL: http://127.0.0.1:5000/users/<username>
+  * URL: http://127.0.0.1:5000/users/{username}
   * Return:
     ```
     {"message": "user deleted"}
@@ -50,7 +50,7 @@ python3 my_flask_api.py
     {"message": "user doesn't exist"}
     ```
 - PUT (Update user's password)
-  * URL: http://127.0.0.1:5000/users/<username>
+  * URL: http://127.0.0.1:5000/users/{username}
   * Body/Row/Json: 
     ```
     {"password": "username's password"}

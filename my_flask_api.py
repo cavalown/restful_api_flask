@@ -10,7 +10,7 @@ app = Flask(__name__)
 ### hoat Status
 @app.route("/")
 def host_status():
-    return {"host":"on"}
+    return jsonify({"host":"on"})
 
 
 
@@ -61,9 +61,7 @@ def delete_user(username):
                 user_list.remove(user)
                 return {"message":"user deleted"}
             elif request.method == "PUT":
-                index = user_list.index(user)
                 user["password"] = request.get_json()["password"]
-                user_list[index] = user
                 return jsonify({"message": "user {}'s password changed".format(user["username"])})
     return jsonify({"message": "user doesn't exist"})
 
